@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employer - JOBIE</title>
+  <link rel="icon" href="./assets/JOBIE.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">JOBIE</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="employer.html" class="active">Employer</a></li>
+      <li><a href="#" onclick="logoutUser()">Logout</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+
+  <section class="employer-section">
+    <div class="form-card">
+      <h2>Post a Job</h2>
+      <form onsubmit="postJob(event)">
+        <label>Job Title</label>
+        <input type="text" id="jobTitle" required>
+        <label>Company</label>
+        <input type="text" id="jobCompany" required>
+        <label>Location</label>
+        <input type="text" id="jobLocation" required>
+        <label>Salary</label>
+        <input type="text" id="jobSalary" required>
+        <label>Description</label>
+        <textarea id="jobDescription" rows="4" required></textarea>
+        <button type="submit">Post Job</button>
+      </form>
+    </div>
+
+    <h3>Applicants</h3>
+    <div class="applicant-list" id="applicantList"></div>
+  </section>
+
+  <script src="scripts.js"></script>
+  <script>
+    displayApplicants();
+  </script>
+</body>
+</html>

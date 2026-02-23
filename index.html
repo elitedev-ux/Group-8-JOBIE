@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JOBIE</title>
+  <link rel="icon" href="./assets/JOBIE.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">JOBIE</div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html">Login/Register</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+
+  <section class="hero">
+    <h1>Find Your Dream Job</h1>
+    <p>Search and apply for industrial training opportunities</p>
+    <div class="search-box">
+      <input type="text" id="searchTitle" placeholder="Job Title">
+      <input type="text" id="searchLocation" placeholder="Location">
+      <button onclick="searchJobs()">Search</button>
+    </div>
+  </section>
+
+  <section class="jobs-section">
+    <h2>Available Jobs</h2>
+    <div class="job-list" id="jobList"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Group 8 Project. All rights reserved.</p>
+  </footer>
+
+<script src="scripts.js"></script>
+  <script>
+    loadDefaultJobs();
+    displayJobs();
+  </script>
+</body>
+</html>

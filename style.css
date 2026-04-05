@@ -670,3 +670,23 @@ footer {
     width: 100%;
   }
 }
+.cta-btn:hover {
+  background: #2563eb;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(59, 130, 246, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .cta-container {
+    padding: 40px 20px;
+  }
+
+  .cta-container h2 {
+    font-size: 2rem;
+  }
+
+  .cta-container p {
+    font-size: 0.95rem;
+  }
+}
